@@ -6,21 +6,16 @@ using UnityEngine;
 public class sentenceGenerator : MonoBehaviour
 {
     void Start()
-    {
+
+    {   
         string[] funny = {"Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird"};
-        string[] randomWords = {};
-
+        string randSentene;
+        
         int i = 0;
-        while(i < randomWords.Length){
-            int rand = Random.Range(i, funny.Length);
-            randomWords[i] = funny[rand];
+        while(i < funny.Length){
+            int rand = Random.Range(i,funny.Length);
+            randSentene = funny[rand] + " ";
             i++;
-        }
-
-        int j=0;
-        while(j < randomWords.Length){
-            Debug.Log(randomWords[j]);
-            j++;
         }
     }
 
